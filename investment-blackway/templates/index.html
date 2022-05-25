@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Главная
+{% endblock %}
+
+{% block content %}
+<!-- Header - set the background image for the header in the line below-->
+<header class="py-5 bg-image-full" style="background-image: url('/static/img/Other/home1.jpg')">
+    <div style="height: 25rem"></div>
+</header>
+<!-- Content section-->
+
+<section class="py-5">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            {% for el in news %}
+            <div class="col-lg-6">
+                {% autoescape off %} <p class="mb-0">{{el.content}} </p>{% endautoescape %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Image element - set the background image for the header in the line below-->
+<div class="py-5 bg-image-full" style="background-image: url('/static/img/Other/home2.jpg')">
+    <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+    <div style="height: 20rem"></div>
+</div>
+<!-- Content section-->
+<section class="py-5">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <p class="mb-0"> </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
